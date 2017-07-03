@@ -58,9 +58,9 @@ contract Lottery {
    **/
   function  drawLottery()  ownerOnly {
     // If lottery withdrawn then just throw
-    // if(winnerPaid) throw;
+    if(winnerPaid) throw;
 
-    // if(participants.length == 0) throw;
+    if(participants.length == 0) throw;
 
     // Generate the random number
     winnerIndex = rand();
